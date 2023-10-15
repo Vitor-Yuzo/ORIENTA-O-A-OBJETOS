@@ -3,14 +3,14 @@ package aula_02;
 public class Caneta 
 {
 	// DEFININDO ATRIBUTOS
-	String modelo;
-	String cor;
-	float ponta;
-	int carga;
-	boolean tampada;
+	public String modelo;
+	public String cor;
+	private float ponta;
+	protected int carga;
+	private boolean tampada;
 	
 	// DEFININDO MÉTODOS
-	void status()
+	public void status()
 	{
 		System.out.println("Modelo: " + this.modelo);
 		System.out.println("Uma caneta " + this.cor);
@@ -19,7 +19,7 @@ public class Caneta
 		System.out.println("Está tampada? " + this.tampada);
 	}
 	
-	void rabiscar()
+	public void rabiscar()
 	{
 		if (this.tampada == true)
 			System.out.println("ERRO! NAO POSSO RABISCAR");
@@ -27,12 +27,12 @@ public class Caneta
 			System.out.println("RABISCANDO...");
 	}
 	
-	void tampar()
+	public void tampar()
 	{
 		this.tampada = true;
 	}
 	
-	void destampar()
+	public void destampar()
 	{
 		this.tampada = false;
 	}
